@@ -1,3 +1,4 @@
+
 import { GoogleGenAI, LiveServerMessage, Modality } from '@google/genai';
 import { createPcmBlob } from '../utils/audioUtils';
 
@@ -65,7 +66,7 @@ export class LiveClient {
             onStatusChange('disconnected');
             this.cleanupAudio();
           },
-          onerror: (e) => {
+          onerror: () => {
             onError(new Error("Connection error"));
             onStatusChange('error');
             this.cleanupAudio();

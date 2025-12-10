@@ -1,6 +1,6 @@
 
 import React, { useState, useCallback, useRef, useEffect } from 'react';
-import { Play, Square, Mic, AlertCircle, Maximize2, Minimize2, Download } from 'lucide-react';
+import { Square, Mic, AlertCircle, Maximize2, Minimize2, Download } from 'lucide-react';
 import { ConnectionStatus, TranscriptSegment } from './types';
 import { liveClient } from './services/liveClient';
 import TranscriptView from './components/TranscriptView';
