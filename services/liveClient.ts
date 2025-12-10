@@ -1,4 +1,3 @@
-
 import { GoogleGenAI, LiveServerMessage, Modality } from '@google/genai';
 import { createPcmBlob } from '../utils/audioUtils';
 
@@ -12,7 +11,9 @@ export class LiveClient {
   private source: MediaStreamAudioSourceNode | null = null;
   
   constructor() {
-    this.client = new GoogleGenAI({ apiKey: process.env.API_KEY });
+    // We use the injected VITE_API_KEY. The generic type assertion avoids TS errors if types aren't perfect.
+    const apiKey = (import.meta as any).env.VITE_API_KEY as string;
+    this.client = new GoogleGenAI({ apiKey: apiKey });
   }
 
   async connect(

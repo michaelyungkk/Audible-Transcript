@@ -7,7 +7,8 @@ export default defineConfig(({ mode }) => {
   return {
     plugins: [react()],
     define: {
-      'process.env.API_KEY': JSON.stringify(env.API_KEY)
+      // This makes the Netlify 'API_KEY' available as 'import.meta.env.VITE_API_KEY' in the code
+      'import.meta.env.VITE_API_KEY': JSON.stringify(env.API_KEY)
     }
   };
 });
