@@ -1,0 +1,7 @@
+{
+  "name": "Audiobook Scribe",
+  "description": "Real-time transcription companion for your audiobooks. Uses the microphone to listen to ambient audio and transcribes it instantly.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
